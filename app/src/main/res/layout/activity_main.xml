@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#541B46"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif-medium"
+        android:layout_margin="12dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:text="Currency Converter"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTile"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFromCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="14sp"
+                    android:text="From:"/>
+
+                <Spinner
+                    android:id="@+id/spFromCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblFrom"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/txtFromCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spFromCurrency"
+                    android:layout_toStartOf="@id/lblFromCurrency"
+                    android:text="1"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+                    android:maxLines="5"
+                    android:scrollHorizontally="false"
+                    android:padding="5dp"
+                    android:gravity="end|center_vertical"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/lblFromCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtFromCurrency"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ABC"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <ImageView
+            android:id="@+id/btnSwap"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_swap_vert_24"
+            android:layout_below="@+id/cvFromCurrency"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvToCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnSwap"
+            android:layout_marginVertical="10dp"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/lblTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="14sp"
+                    android:text="To:"/>
+
+                <Spinner
+                    android:id="@+id/spToCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblTo"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txtToCurrency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spToCurrency"
+                    android:layout_toStartOf="@+id/lblToCurrency"
+                    android:text="0"
+                    android:background="@android:color/transparent"
+                    android:scrollHorizontally="false"
+                    android:padding="5dp"
+                    android:gravity="end|center_vertical"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/lblToCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/txtToCurrency"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ABC"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/btnSetDefaultCurrencies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvToCurrency"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Set Default Currencies" />
+
+
+        <TextView
+            android:id="@+id/TvHistory"
+            android:layout_width="wrap_content"
+            android:text="History"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_below="@+id/btnSetDefaultCurrencies"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/TvclrHistory"
+            android:layout_width="wrap_content"
+            android:text="Clear History"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@+id/btnSetDefaultCurrencies"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_below="@+id/TvHistory"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

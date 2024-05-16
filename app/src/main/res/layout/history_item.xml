@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/tvfrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="USD"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="12dp" />
+
+
+    <TextView
+        android:id="@+id/tvTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="USD"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="12dp" />
+
+
+    <TextView
+        android:id="@+id/fromPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="12dp" />
+
+
+    <TextView
+        android:id="@+id/toPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="83"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_margin="12dp" />
+
+
+
+</LinearLayout>
